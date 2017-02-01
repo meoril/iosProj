@@ -1,0 +1,6 @@
+framework module Pods_MyClinics {
+  umbrella header "Pods-MyClinics-umbrella.h"
+
+  export *
+  module * { export * }
+}

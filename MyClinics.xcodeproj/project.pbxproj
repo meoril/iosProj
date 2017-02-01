@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88F0B0C38835A5E99247262B /* Pods_MyClinics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C37E2BF9BA669E5C3B1773 /* Pods_MyClinics.framework */; };
+		BC200F0B1E408D140045158F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F0A1E408D140045158F /* AppDelegate.swift */; };
+		BC200F0D1E408D140045158F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F0C1E408D140045158F /* ViewController.swift */; };
+		BC200F101E408D140045158F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC200F0E1E408D140045158F /* Main.storyboard */; };
+		BC200F131E408D140045158F /* MyClinics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC200F111E408D140045158F /* MyClinics.xcdatamodeld */; };
+		BC200F151E408D140045158F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC200F141E408D140045158F /* Assets.xcassets */; };
+		BC200F181E408D140045158F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC200F161E408D140045158F /* LaunchScreen.storyboard */; };
+		BC200F231E408D140045158F /* MyClinicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F221E408D140045158F /* MyClinicsTests.swift */; };
+		BC200F2E1E4090E30045158F /* ClinicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F2D1E4090E30045158F /* ClinicTableViewCell.swift */; };
+		BC200F301E4091E90045158F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC200F2F1E4091E90045158F /* GoogleService-Info.plist */; };
+		BC200F321E40A6F00045158F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC200F311E40A6F00045158F /* MapKit.framework */; };
+		BC200F341E40A85D0045158F /* NewClinicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F331E40A85D0045158F /* NewClinicViewController.swift */; };
+		BC200F3A1E40C9420045158F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F391E40C9420045158F /* MainTableViewController.swift */; };
+		BC200F3C1E40C9C10045158F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F3B1E40C9C10045158F /* Constants.swift */; };
+		BC200F411E40D06A0045158F /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F401E40D06A0045158F /* Clinic.swift */; };
+		BC200F431E40D1AF0045158F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F421E40D1AF0045158F /* DateExtension.swift */; };
+		BC200F451E40D35E0045158F /* FBDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F441E40D35E0045158F /* FBDataService.swift */; };
+		BC200F471E40DCB90045158F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F461E40DCB90045158F /* DataService.swift */; };
+		BC200F491E40DD160045158F /* SQLDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F481E40DD160045158F /* SQLDataService.swift */; };
+		BC200F4B1E41FE760045158F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC200F4A1E41FE760045158F /* libsqlite3.0.tbd */; };
+		BC200F4E1E4201680045158F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F4D1E4201680045158F /* StringExtension.swift */; };
+		BC200F501E4202E90045158F /* LastUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F4F1E4202E90045158F /* LastUpdateService.swift */; };
+		F4B365F1AF1A0056BF67027D /* Pods_MyClinicsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0948B81A14E10D3D90605102 /* Pods_MyClinicsTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC200F1F1E408D140045158F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC200EFF1E408D140045158F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC200F061E408D140045158F;
+			remoteInfo = MyClinics;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03C37E2BF9BA669E5C3B1773 /* Pods_MyClinics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyClinics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0948B81A14E10D3D90605102 /* Pods_MyClinicsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyClinicsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C7D2B563A34DF4CCB30F382 /* Pods-MyClinicsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyClinicsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyClinicsTests/Pods-MyClinicsTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A70AB91D2559E909630E499 /* Pods-MyClinicsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyClinicsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyClinicsTests/Pods-MyClinicsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5028A33A9D59FA1AD3044A46 /* Pods-MyClinics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyClinics.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyClinics/Pods-MyClinics.release.xcconfig"; sourceTree = "<group>"; };
+		6E31C0B1316849FCB2A12892 /* Pods-MyClinics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyClinics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyClinics/Pods-MyClinics.debug.xcconfig"; sourceTree = "<group>"; };
+		BC200F071E408D140045158F /* MyClinics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyClinics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC200F0A1E408D140045158F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC200F0C1E408D140045158F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC200F0F1E408D140045158F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC200F121E408D140045158F /* MyClinics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyClinics.xcdatamodel; sourceTree = "<group>"; };
+		BC200F141E408D140045158F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC200F171E408D140045158F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC200F191E408D140045158F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC200F1E1E408D140045158F /* MyClinicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyClinicsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC200F221E408D140045158F /* MyClinicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClinicsTests.swift; sourceTree = "<group>"; };
+		BC200F241E408D140045158F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC200F2D1E4090E30045158F /* ClinicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClinicTableViewCell.swift; sourceTree = "<group>"; };
+		BC200F2F1E4091E90045158F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BC200F311E40A6F00045158F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BC200F331E40A85D0045158F /* NewClinicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClinicViewController.swift; sourceTree = "<group>"; };
+		BC200F391E40C9420045158F /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		BC200F3B1E40C9C10045158F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BC200F401E40D06A0045158F /* Clinic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
+		BC200F421E40D1AF0045158F /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		BC200F441E40D35E0045158F /* FBDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBDataService.swift; sourceTree = "<group>"; };
+		BC200F461E40DCB90045158F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		BC200F481E40DD160045158F /* SQLDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLDataService.swift; sourceTree = "<group>"; };
+		BC200F4A1E41FE760045158F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		BC200F4C1E41FF560045158F /* MyClinics-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyClinics-Bridging-Header.h"; sourceTree = "<group>"; };
+		BC200F4D1E4201680045158F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		BC200F4F1E4202E90045158F /* LastUpdateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastUpdateService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC200F041E408D140045158F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC200F4B1E41FE760045158F /* libsqlite3.0.tbd in Frameworks */,
+				BC200F321E40A6F00045158F /* MapKit.framework in Frameworks */,
+				88F0B0C38835A5E99247262B /* Pods_MyClinics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC200F1B1E408D140045158F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4B365F1AF1A0056BF67027D /* Pods_MyClinicsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC200EFE1E408D140045158F = {
+			isa = PBXGroup;
+			children = (
+				BC200F091E408D140045158F /* MyClinics */,
+				BC200F211E408D140045158F /* MyClinicsTests */,
+				BC200F081E408D140045158F /* Products */,
+				E459590CB8A20339DA8B89B7 /* Pods */,
+				C1024F86731CBA5DADC12A33 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BC200F081E408D140045158F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC200F071E408D140045158F /* MyClinics.app */,
+				BC200F1E1E408D140045158F /* MyClinicsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC200F091E408D140045158F /* MyClinics */ = {
+			isa = PBXGroup;
+			children = (
+				BC200F3F1E40D05C0045158F /* Models */,
+				BC200F0A1E408D140045158F /* AppDelegate.swift */,
+				BC200F0C1E408D140045158F /* ViewController.swift */,
+				BC200F2D1E4090E30045158F /* ClinicTableViewCell.swift */,
+				BC200F391E40C9420045158F /* MainTableViewController.swift */,
+				BC200F331E40A85D0045158F /* NewClinicViewController.swift */,
+				BC200F0E1E408D140045158F /* Main.storyboard */,
+				BC200F141E408D140045158F /* Assets.xcassets */,
+				BC200F161E408D140045158F /* LaunchScreen.storyboard */,
+				BC200F191E408D140045158F /* Info.plist */,
+				BC200F111E408D140045158F /* MyClinics.xcdatamodeld */,
+				BC200F2F1E4091E90045158F /* GoogleService-Info.plist */,
+				BC200F3B1E40C9C10045158F /* Constants.swift */,
+				BC200F4C1E41FF560045158F /* MyClinics-Bridging-Header.h */,
+			);
+			path = MyClinics;
+			sourceTree = "<group>";
+		};
+		BC200F211E408D140045158F /* MyClinicsTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC200F221E408D140045158F /* MyClinicsTests.swift */,
+				BC200F241E408D140045158F /* Info.plist */,
+			);
+			path = MyClinicsTests;
+			sourceTree = "<group>";
+		};
+		BC200F3F1E40D05C0045158F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC200F401E40D06A0045158F /* Clinic.swift */,
+				BC200F421E40D1AF0045158F /* DateExtension.swift */,
+				BC200F441E40D35E0045158F /* FBDataService.swift */,
+				BC200F461E40DCB90045158F /* DataService.swift */,
+				BC200F4F1E4202E90045158F /* LastUpdateService.swift */,
+				BC200F481E40DD160045158F /* SQLDataService.swift */,
+				BC200F4D1E4201680045158F /* StringExtension.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C1024F86731CBA5DADC12A33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC200F4A1E41FE760045158F /* libsqlite3.0.tbd */,
+				BC200F311E40A6F00045158F /* MapKit.framework */,
+				03C37E2BF9BA669E5C3B1773 /* Pods_MyClinics.framework */,
+				0948B81A14E10D3D90605102 /* Pods_MyClinicsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E459590CB8A20339DA8B89B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E31C0B1316849FCB2A12892 /* Pods-MyClinics.debug.xcconfig */,
+				5028A33A9D59FA1AD3044A46 /* Pods-MyClinics.release.xcconfig */,
+				2A70AB91D2559E909630E499 /* Pods-MyClinicsTests.debug.xcconfig */,
+				1C7D2B563A34DF4CCB30F382 /* Pods-MyClinicsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC200F061E408D140045158F /* MyClinics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC200F271E408D140045158F /* Build configuration list for PBXNativeTarget "MyClinics" */;
+			buildPhases = (
+				11ED3D53D865C3426A3511E4 /* [CP] Check Pods Manifest.lock */,
+				BC200F031E408D140045158F /* Sources */,
+				BC200F041E408D140045158F /* Frameworks */,
+				BC200F051E408D140045158F /* Resources */,
+				F9E58777590003639FAD998B /* [CP] Embed Pods Frameworks */,
+				AF2F8947FB790E5638AD1779 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyClinics;
+			productName = MyClinics;
+			productReference = BC200F071E408D140045158F /* MyClinics.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC200F1D1E408D140045158F /* MyClinicsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC200F2A1E408D140045158F /* Build configuration list for PBXNativeTarget "MyClinicsTests" */;
+			buildPhases = (
+				0B6E646BC0468DFCEE701F06 /* [CP] Check Pods Manifest.lock */,
+				BC200F1A1E408D140045158F /* Sources */,
+				BC200F1B1E408D140045158F /* Frameworks */,
+				BC200F1C1E408D140045158F /* Resources */,
+				35FAEACCFCD10B2D6C87060F /* [CP] Embed Pods Frameworks */,
+				5F91E1888A4FA88C052EAF89 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC200F201E408D140045158F /* PBXTargetDependency */,
+			);
+			name = MyClinicsTests;
+			productName = MyClinicsTests;
+			productReference = BC200F1E1E408D140045158F /* MyClinicsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC200EFF1E408D140045158F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = meori.noa;
+				TargetAttributes = {
+					BC200F061E408D140045158F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T84XWYVCX5;
+						ProvisioningStyle = Automatic;
+					};
+					BC200F1D1E408D140045158F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BC200F061E408D140045158F;
+					};
+				};
+			};
+			buildConfigurationList = BC200F021E408D140045158F /* Build configuration list for PBXProject "MyClinics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC200EFE1E408D140045158F;
+			productRefGroup = BC200F081E408D140045158F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC200F061E408D140045158F /* MyClinics */,
+				BC200F1D1E408D140045158F /* MyClinicsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC200F051E408D140045158F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC200F181E408D140045158F /* LaunchScreen.storyboard in Resources */,
+				BC200F301E4091E90045158F /* GoogleService-Info.plist in Resources */,
+				BC200F151E408D140045158F /* Assets.xcassets in Resources */,
+				BC200F101E408D140045158F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC200F1C1E408D140045158F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B6E646BC0468DFCEE701F06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		11ED3D53D865C3426A3511E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35FAEACCFCD10B2D6C87060F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyClinicsTests/Pods-MyClinicsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F91E1888A4FA88C052EAF89 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyClinicsTests/Pods-MyClinicsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF2F8947FB790E5638AD1779 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyClinics/Pods-MyClinics-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9E58777590003639FAD998B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyClinics/Pods-MyClinics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC200F031E408D140045158F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC200F0D1E408D140045158F /* ViewController.swift in Sources */,
+				BC200F431E40D1AF0045158F /* DateExtension.swift in Sources */,
+				BC200F2E1E4090E30045158F /* ClinicTableViewCell.swift in Sources */,
+				BC200F341E40A85D0045158F /* NewClinicViewController.swift in Sources */,
+				BC200F501E4202E90045158F /* LastUpdateService.swift in Sources */,
+				BC200F131E408D140045158F /* MyClinics.xcdatamodeld in Sources */,
+				BC200F471E40DCB90045158F /* DataService.swift in Sources */,
+				BC200F3C1E40C9C10045158F /* Constants.swift in Sources */,
+				BC200F3A1E40C9420045158F /* MainTableViewController.swift in Sources */,
+				BC200F451E40D35E0045158F /* FBDataService.swift in Sources */,
+				BC200F411E40D06A0045158F /* Clinic.swift in Sources */,
+				BC200F491E40DD160045158F /* SQLDataService.swift in Sources */,
+				BC200F4E1E4201680045158F /* StringExtension.swift in Sources */,
+				BC200F0B1E408D140045158F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC200F1A1E408D140045158F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC200F231E408D140045158F /* MyClinicsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC200F201E408D140045158F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC200F061E408D140045158F /* MyClinics */;
+			targetProxy = BC200F1F1E408D140045158F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC200F0E1E408D140045158F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC200F0F1E408D140045158F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC200F161E408D140045158F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC200F171E408D140045158F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC200F251E408D140045158F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC200F261E408D140045158F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC200F281E408D140045158F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E31C0B1316849FCB2A12892 /* Pods-MyClinics.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T84XWYVCX5;
+				INFOPLIST_FILE = MyClinics/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = colman.MyClinics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyClinics/MyClinics-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BC200F291E408D140045158F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5028A33A9D59FA1AD3044A46 /* Pods-MyClinics.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T84XWYVCX5;
+				INFOPLIST_FILE = MyClinics/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = colman.MyClinics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyClinics/MyClinics-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BC200F2B1E408D140045158F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A70AB91D2559E909630E499 /* Pods-MyClinicsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyClinicsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = colman.MyClinicsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyClinics.app/MyClinics";
+			};
+			name = Debug;
+		};
+		BC200F2C1E408D140045158F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C7D2B563A34DF4CCB30F382 /* Pods-MyClinicsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyClinicsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = colman.MyClinicsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyClinics.app/MyClinics";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC200F021E408D140045158F /* Build configuration list for PBXProject "MyClinics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC200F251E408D140045158F /* Debug */,
+				BC200F261E408D140045158F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC200F271E408D140045158F /* Build configuration list for PBXNativeTarget "MyClinics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC200F281E408D140045158F /* Debug */,
+				BC200F291E408D140045158F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC200F2A1E408D140045158F /* Build configuration list for PBXNativeTarget "MyClinicsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC200F2B1E408D140045158F /* Debug */,
+				BC200F2C1E408D140045158F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BC200F111E408D140045158F /* MyClinics.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BC200F121E408D140045158F /* MyClinics.xcdatamodel */,
+			);
+			currentVersion = BC200F121E408D140045158F /* MyClinics.xcdatamodel */;
+			path = MyClinics.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BC200EFF1E408D140045158F /* Project object */;
+}
