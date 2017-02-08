@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D7A82E21E4A4AEA0021EEF7 /* ClinicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7A82E11E4A4AEA0021EEF7 /* ClinicViewController.swift */; };
 		88F0B0C38835A5E99247262B /* Pods_MyClinics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C37E2BF9BA669E5C3B1773 /* Pods_MyClinics.framework */; };
 		BC200F0B1E408D140045158F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F0A1E408D140045158F /* AppDelegate.swift */; };
 		BC200F0D1E408D140045158F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC200F0C1E408D140045158F /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		0948B81A14E10D3D90605102 /* Pods_MyClinicsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyClinicsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7D2B563A34DF4CCB30F382 /* Pods-MyClinicsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyClinicsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyClinicsTests/Pods-MyClinicsTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A70AB91D2559E909630E499 /* Pods-MyClinicsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyClinicsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyClinicsTests/Pods-MyClinicsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D7A82E11E4A4AEA0021EEF7 /* ClinicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClinicViewController.swift; sourceTree = "<group>"; };
 		5028A33A9D59FA1AD3044A46 /* Pods-MyClinics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyClinics.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyClinics/Pods-MyClinics.release.xcconfig"; sourceTree = "<group>"; };
 		6E31C0B1316849FCB2A12892 /* Pods-MyClinics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyClinics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyClinics/Pods-MyClinics.debug.xcconfig"; sourceTree = "<group>"; };
 		BC200F071E408D140045158F /* MyClinics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyClinics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 				BC200F391E40C9420045158F /* MainTableViewController.swift */,
 				BC200F331E40A85D0045158F /* NewClinicViewController.swift */,
 				BC200F0E1E408D140045158F /* Main.storyboard */,
+				4D7A82E11E4A4AEA0021EEF7 /* ClinicViewController.swift */,
 				BC200F141E408D140045158F /* Assets.xcassets */,
 				BC200F161E408D140045158F /* LaunchScreen.storyboard */,
 				BC200F191E408D140045158F /* Info.plist */,
@@ -401,6 +404,7 @@
 				BC200F451E40D35E0045158F /* FBDataService.swift in Sources */,
 				BC200F411E40D06A0045158F /* Clinic.swift in Sources */,
 				BC200F491E40DD160045158F /* SQLDataService.swift in Sources */,
+				4D7A82E21E4A4AEA0021EEF7 /* ClinicViewController.swift in Sources */,
 				BC200F4E1E4201680045158F /* StringExtension.swift in Sources */,
 				BC200F0B1E408D140045158F /* AppDelegate.swift in Sources */,
 			);

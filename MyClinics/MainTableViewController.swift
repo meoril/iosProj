@@ -10,6 +10,7 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
   var myClinics = [Clinic]()
+    let clinicSegueIdentifier = "ShowClinicSegue"
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -58,6 +59,19 @@ class MainTableViewController: UITableViewController {
     }
     return cell
   }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == clinicSegueIdentifier,
+            let destination = segue.destination as? ClinicViewController,
+            let clinicIdex = self.tableView.indexPathForSelectedRow?.row
+        {
+            destination.selectedClinic = myClinics[clinicIdex]
+        }
+    }
+    
+    
+    
   
   
   /*
