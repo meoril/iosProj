@@ -15,9 +15,12 @@ class MainTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    // registering to the clinics list did update notification
     NotificationCenter.default.addObserver(self, selector:
       #selector(self.clinicsListDidUpdate), name: NSNotification.Name(rawValue: notifyClinicListUpdate),object: nil)
-    DataService.instance.getAllClinicsAndObserve()
+    
+    // loading the clinics
+    DataService.instance.getAllClinics()
   }
   
   @objc func clinicsListDidUpdate(notification:NSNotification){
@@ -42,7 +45,7 @@ class MainTableViewController: UITableViewController {
     return self.myClinics.count
   }
   
-  // for the unwind segue, reload the view in order to show the new student
+  // for the unwind segue, reload the view in order to show the new clinic
   @IBAction func saveDetails(segue:UIStoryboardSegue) {
     self.tableView.reloadData()
   }
@@ -52,6 +55,7 @@ class MainTableViewController: UITableViewController {
     cell.myNameLabel!.text = self.myClinics[indexPath.row].name
     cell.myAddressLabel!.text = self.myClinics[indexPath.row].address
     
+    // for each cell load the clinic's image
     if let imUrl = self.myClinics[indexPath.row].imageUrl{
       DataService.instance.getImage(urlStr: imUrl, callback: { (image) in
         cell.myImage!.image = image
@@ -69,54 +73,4 @@ class MainTableViewController: UITableViewController {
             destination.selectedClinic = myClinics[clinicIdex]
         }
     }
-    
-    
-    
-  
-  
-  /*
-   // Override to support conditional editing of the table view.
-   override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-   // Return false if you do not want the specified item to be editable.
-   return true
-   }
-   */
-  
-  /*
-   // Override to support editing the table view.
-   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-   if editingStyle == .delete {
-   // Delete the row from the data source
-   tableView.deleteRows(at: [indexPath], with: .fade)
-   } else if editingStyle == .insert {
-   // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-   }
-   }
-   */
-  
-  /*
-   // Override to support rearranging the table view.
-   override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-   
-   }
-   */
-  
-  /*
-   // Override to support conditional rearranging of the table view.
-   override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-   // Return false if you do not want the item to be re-orderable.
-   return true
-   }
-   */
-  
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
-  
 }

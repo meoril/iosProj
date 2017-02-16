@@ -57,7 +57,6 @@ class Clinic {
   
   /* SQL Part Start */
   static let CLINIC_TABLE = "CLINICS"
-  //static let CLINIC_ID = "CLINIC_ID"
   static let CLINIC_NAME = "NAME"
   static let CLINIC_ADDRESS = "ADDRESS"
   static let CLINIC_LATITUDE = "LATITUDE"
@@ -129,6 +128,8 @@ class Clinic {
     var sqlite3_stmt: OpaquePointer? = nil
     if (sqlite3_prepare_v2(database,"SELECT * from CLINICS;",-1,&sqlite3_stmt,nil) == SQLITE_OK){
       while(sqlite3_step(sqlite3_stmt) == SQLITE_ROW){
+        // using the extension method to valide utf8 string values (more explanation at the extension
+        // class)
         let name =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,0))
         let address =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,1))
         let latitude =  Double(sqlite3_column_double(sqlite3_stmt,2))
@@ -141,7 +142,7 @@ class Clinic {
           imageUrl = nil
         }
         let clinic = Clinic(name: name!, address: address!, latitude: latitude, longitude: longitude, imageUrl: imageUrl, recommendation: recommendation!)
-      clinics.append(clinic)
+        clinics.append(clinic)
       }
     }
     sqlite3_finalize(sqlite3_stmt)

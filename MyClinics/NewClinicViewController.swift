@@ -90,14 +90,7 @@ class NewClinicViewController: UIViewController , UIImagePickerControllerDelegat
     return self.myNameLabel.text != "" && self.myAddressLabel.text != "" && self.myImageView.image != nil
       && self.selcetedLongitude != 0 && self.selectedLatitude != 0
   }
-  
-//  @objc func clinicsListDidUpdate(notification:NSNotification){
-//    let clinics = notification.userInfo?["clinics"] as! [Clinic]
-//    for clinic in clinics {
-//      print("name: \(clinic.name) \(clinic.lastUpdate!)")
-//    }
-//  }
-//  
+
   /*************  Image loader section  ****************/
   
   @IBAction func myLoadImage_Clicked(_ sender: UIButton) {
@@ -120,10 +113,7 @@ class NewClinicViewController: UIViewController , UIImagePickerControllerDelegat
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
     dismiss(animated: true, completion: nil)
   }
-  
-  //  func imagePickerController(_ picker: UIImagePickerController, pickedImage: UIImage?) {
-  //
-  //  }
+
   
   /*************  Image loader section end  ****************/
   
