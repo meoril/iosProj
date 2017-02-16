@@ -14,18 +14,18 @@ class ClinicViewController: UIViewController {
     @IBOutlet weak var clinicAddressLbl: UILabel!
     @IBOutlet weak var clinicNameLable: UILabel!
     @IBOutlet weak var clinicImage: UIImageView!
+    @IBOutlet weak var clinicRecomm: UILabel!
 
-    var selectedClinic = Clinic(name:"",address:" ",latitude:0.0,longitude:0.0);
+    var selectedClinic = Clinic(name:"",address:" ",latitude:0.0,longitude:0.0,recommendation:" ");
     
     @IBAction func button(_ sender: UIButton) {
-        let coordinates = CLLocationCoordinate2DMake(selectedClinic.latitude, selectedClinic.latitude)
+        let coordinates = CLLocationCoordinate2DMake(selectedClinic.latitude,
+                                                     selectedClinic.longitude)
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapitem = MKMapItem(placemark: placemark)
         let options = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
         mapitem.openInMaps(launchOptions: options)
     }
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,8 @@ class ClinicViewController: UIViewController {
         
         clinicNameLable.text = selectedClinic.name
         clinicAddressLbl.text = selectedClinic.address
+        clinicRecomm.text = selectedClinic.recommendation
+        
         
         if let imUrl = selectedClinic.imageUrl{
             DataService.instance.getImage(urlStr: imUrl, callback: { (image) in

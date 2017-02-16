@@ -17,6 +17,7 @@ class NewClinicViewController: UIViewController , UIImagePickerControllerDelegat
   @IBOutlet weak var myMap: MKMapView!
   @IBOutlet weak var myImageView: UIImageView!
   @IBOutlet weak var mySaveButton: UIBarButtonItem!
+  @IBOutlet weak var myRecommendation: UITextView!
   
   let imagePicker = UIImagePickerController()
   var locationManager = CLLocationManager()
@@ -136,7 +137,8 @@ class NewClinicViewController: UIViewController , UIImagePickerControllerDelegat
     // Pass the selected object to the new view controller.
     DataService.instance.saveImage(image: self.myImageView.image!, name: self.myNameLabel.text!){(url) in
       
-      DataService.instance.addClinic(clinic: Clinic(name: self.myNameLabel.text!, address: self.myAddressLabel.text!, latitude: self.selectedLatitude, longitude: self.selcetedLongitude, imageUrl: url))
+        DataService.instance.addClinic(clinic: Clinic(name: self.myNameLabel.text!, address: self.myAddressLabel.text!,
+                                                     latitude: self.selectedLatitude,longitude: self.selcetedLongitude, imageUrl: url,  recommendation: self.myRecommendation.text ))
     }
   }
 }

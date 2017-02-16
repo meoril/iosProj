@@ -16,13 +16,15 @@ class Clinic {
   var latitude:Double
   var longitude:Double
   var lastUpdate:Date?
+  var recommendation:String
   
-  init(name:String, address:String, latitude:Double, longitude:Double, imageUrl:String? = nil){
+    init(name:String, address:String, latitude:Double, longitude:Double, imageUrl:String? = nil, recommendation:String){
     self.name = name
     self.address = address
     self.latitude = latitude
     self.longitude = longitude
     self.imageUrl = imageUrl
+    self.recommendation = recommendation
   }
 
   init(json:Dictionary<String,Any>){
@@ -30,6 +32,7 @@ class Clinic {
     address = json["address"] as! String
     latitude = json["latitude"] as! Double
     longitude = json["longitude"] as! Double
+    recommendation = json["recommendation"] as! String
     if let im = json["imageUrl"] as? String{
       imageUrl = im
     }
@@ -44,6 +47,7 @@ class Clinic {
     json["address"] = address
     json["latitude"] = latitude
     json["longitude"] = longitude
+    json["recommendation"] = recommendation
     if (imageUrl != nil){
       json["imageUrl"] = imageUrl!
     }
@@ -60,6 +64,7 @@ class Clinic {
   static let CLINIC_LONGITUDE = "LONGITUDE"
   static let CLINIC_IMAGE_URL = "IMAGE_URL"
   static let CLINIC_LAST_UPDATE = "CLINIC_LAST_UPDATE"
+  static let CLINIC_RECOMMENDATION = "CLINIC_RECOMMENDATION"
   
   
   static func createTable(database:OpaquePointer?)->Bool{
@@ -70,6 +75,7 @@ class Clinic {
       + CLINIC_LATITUDE + " DOUBLE, "
       + CLINIC_LONGITUDE + " DOUBLE, "
       + CLINIC_IMAGE_URL + " TEXT, "
+      + CLINIC_RECOMMENDATION + " TEXT, "
       + CLINIC_LAST_UPDATE + " DOUBLE)", nil, nil, &errormsg);
     if(res != 0){
       print("error creating table");
@@ -87,12 +93,14 @@ class Clinic {
       + Clinic.CLINIC_LATITUDE + ","
       + Clinic.CLINIC_LONGITUDE + ","
       + Clinic.CLINIC_IMAGE_URL + ","
-      + Clinic.CLINIC_LAST_UPDATE + ") VALUES (?,?,?,?,?,?);",-1, &sqlite3_stmt,nil) == SQLITE_OK){
+      + Clinic.CLINIC_RECOMMENDATION + ","
+      + Clinic.CLINIC_LAST_UPDATE + ") VALUES (?,?,?,?,?,?,?);",-1, &sqlite3_stmt,nil) == SQLITE_OK){
       
       let name = self.name.cString(using: .utf8)
       let address = self.address.cString(using: .utf8)
       let latitude = self.latitude
       let longitude = self.longitude
+      let recommendation = self.recommendation.cString(using: .utf8)
       var imageUrl = "".cString(using: .utf8)
       if self.imageUrl != nil {
         imageUrl = self.imageUrl!.cString(using: .utf8)
@@ -103,10 +111,11 @@ class Clinic {
       sqlite3_bind_double(sqlite3_stmt, 3, latitude);
       sqlite3_bind_double(sqlite3_stmt, 4, longitude);
       sqlite3_bind_text(sqlite3_stmt, 5, imageUrl,-1,nil);
-      if (lastUpdate == nil){
+      sqlite3_bind_text(sqlite3_stmt, 6, recommendation,-1,nil);
+        if (lastUpdate == nil){
         lastUpdate = Date()
       }
-      sqlite3_bind_double(sqlite3_stmt, 6, lastUpdate!.toFirebase());
+      sqlite3_bind_double(sqlite3_stmt, 7, lastUpdate!.toFirebase());
       
       if(sqlite3_step(sqlite3_stmt) == SQLITE_DONE){
         print("new row added succefully")
@@ -125,12 +134,13 @@ class Clinic {
         let latitude =  Double(sqlite3_column_double(sqlite3_stmt,2))
         let longitude =  Double(sqlite3_column_double(sqlite3_stmt,3))
         var imageUrl =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,4))
+        let recommendation = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,5))
         
-        print("read from filter st:  \(name) \(address) \(latitude) \(longitude) \(imageUrl)")
+        print("read from filter st:  \(name) \(address) \(latitude) \(longitude) \(imageUrl) ֿ\(recommendation)")
         if (imageUrl != nil && imageUrl == ""){
           imageUrl = nil
         }
-        let clinic = Clinic(name: name!, address: address!, latitude: latitude, longitude: longitude, imageUrl: imageUrl)
+        let clinic = Clinic(name: name!, address: address!, latitude: latitude, longitude: longitude, imageUrl: imageUrl, recommendation: recommendation!)
       clinics.append(clinic)
       }
     }
